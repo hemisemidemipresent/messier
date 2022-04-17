@@ -3,900 +3,900 @@
         "ra": 101.289,
         "dec": -16.713,
         "v": -1.44,
-        "Name": "alpha_CMa (Sirius)"
+        "name": "alpha_CMa (Sirius)"
     },
     {
         "ra": 95.988,
         "dec": -52.696,
         "v": -0.62,
-        "Name": "alpha_Car (Canopus)"
+        "name": "alpha_Car (Canopus)"
     },
     {
         "ra": 213.918,
         "dec": 19.187,
         "v": -0.05,
-        "Name": "alpha_Boo (Arcturus)"
+        "name": "alpha_Boo (Arcturus)"
     },
     {
         "ra": 219.92,
         "dec": -60.835,
         "v": -0.01,
-        "Name": "alpha1_Cen (Rigel Kent)"
+        "name": "alpha1_Cen (Rigel Kent)"
     },
     {
         "ra": 279.234,
         "dec": 38.783,
         "v": 0.03,
-        "Name": "alpha_Lyr (Vega)"
+        "name": "alpha_Lyr (Vega)"
     },
     {
         "ra": 79.172,
         "dec": 45.999,
         "v": 0.08,
-        "Name": "alpha_Aur (Capella)"
+        "name": "alpha_Aur (Capella)"
     },
     {
         "ra": 78.634,
         "dec": -8.202,
         "v": 0.18,
-        "Name": "beta_Ori (Rigel)"
+        "name": "beta_Ori (Rigel)"
     },
     {
         "ra": 114.827,
         "dec": 5.228,
         "v": 0.4,
-        "Name": "alpha_CMi (Procyon)"
+        "name": "alpha_CMi (Procyon)"
     },
     {
         "ra": 88.793,
         "dec": 7.407,
         "v": 0.45,
-        "Name": "alpha_Ori (Betelgeuse)"
+        "name": "alpha_Ori (Betelgeuse)"
     },
     {
         "ra": 24.428,
         "dec": -57.237,
         "v": 0.45,
-        "Name": "alpha_Eri (Achernar)"
+        "name": "alpha_Eri (Achernar)"
     },
     {
         "ra": 210.956,
         "dec": -60.373,
         "v": 0.61,
-        "Name": "beta_Cen (Hadar)"
+        "name": "beta_Cen (Hadar)"
     },
     {
         "ra": 297.695,
         "dec": 8.867,
         "v": 0.76,
-        "Name": "alpha_Aql (Altair)"
+        "name": "alpha_Aql (Altair)"
     },
     {
         "ra": 186.65,
         "dec": -63.099,
         "v": 0.77,
-        "Name": "alpha1_Cru (Acrux)"
+        "name": "alpha1_Cru (Acrux)"
     },
     {
         "ra": 68.98,
         "dec": 16.51,
         "v": 0.87,
-        "Name": "alpha_Tau (Aldebaran)"
+        "name": "alpha_Tau (Aldebaran)"
     },
     {
         "ra": 201.298,
         "dec": -11.161,
         "v": 0.98,
-        "Name": "alpha_Vir (Spica)"
+        "name": "alpha_Vir (Spica)"
     },
     {
         "ra": 247.352,
         "dec": -26.432,
         "v": 1.06,
-        "Name": "alpha_Sco (Antares)"
+        "name": "alpha_Sco (Antares)"
     },
     {
         "ra": 116.331,
         "dec": 28.026,
         "v": 1.16,
-        "Name": "beta_Gem (Pollux)"
+        "name": "beta_Gem (Pollux)"
     },
     {
         "ra": 344.412,
         "dec": -29.622,
         "v": 1.17,
-        "Name": "alpha_PsA (Fomalhaut)"
+        "name": "alpha_PsA (Fomalhaut)"
     },
     {
         "ra": 310.358,
         "dec": 45.28,
         "v": 1.25,
-        "Name": "alpha_Cyg (Deneb)"
+        "name": "alpha_Cyg (Deneb)"
     },
     {
         "ra": 191.93,
         "dec": -59.689,
         "v": 1.25,
-        "Name": "beta_Cru"
+        "name": "beta_Cru"
     },
     {
         "ra": 219.914,
         "dec": -60.839,
         "v": 1.35,
-        "Name": "alpha2_Cen"
+        "name": "alpha2_Cen"
     },
     {
         "ra": 152.094,
         "dec": 11.967,
         "v": 1.36,
-        "Name": "alpha_Leo (Regulus)"
+        "name": "alpha_Leo (Regulus)"
     },
     {
         "ra": 104.656,
         "dec": -28.972,
         "v": 1.5,
-        "Name": "epsilon_CMa (Adhara)"
+        "name": "epsilon_CMa (Adhara)"
     },
     {
         "ra": 113.65,
         "dec": 31.889,
         "v": 1.58,
-        "Name": "alpha_Gem (Castor)"
+        "name": "alpha_Gem (Castor)"
     },
     {
         "ra": 187.791,
         "dec": -57.113,
         "v": 1.59,
-        "Name": "gamma_Cru"
+        "name": "gamma_Cru"
     },
     {
         "ra": 263.402,
         "dec": -37.104,
         "v": 1.62,
-        "Name": "lambda_Sco (Shaula)"
+        "name": "lambda_Sco (Shaula)"
     },
     {
         "ra": 81.283,
         "dec": 6.35,
         "v": 1.64,
-        "Name": "gamma_Ori (Bellatrix)"
+        "name": "gamma_Ori (Bellatrix)"
     },
     {
         "ra": 81.573,
         "dec": 28.608,
         "v": 1.65,
-        "Name": "beta_Tau (Alnath)"
+        "name": "beta_Tau (Alnath)"
     },
     {
         "ra": 138.301,
         "dec": -69.717,
         "v": 1.67,
-        "Name": "beta_Car"
+        "name": "beta_Car"
     },
     {
         "ra": 84.053,
         "dec": -1.202,
         "v": 1.69,
-        "Name": "epsilon_Ori (Alnilam)"
+        "name": "epsilon_Ori (Alnilam)"
     },
     {
         "ra": 332.058,
         "dec": -46.961,
         "v": 1.73,
-        "Name": "alpha_Gru (Alnair)"
+        "name": "alpha_Gru (Alnair)"
     },
     {
         "ra": 85.19,
         "dec": -1.943,
         "v": 1.74,
-        "Name": "zeta_Ori (Alnitak)"
+        "name": "zeta_Ori (Alnitak)"
     },
     {
         "ra": 122.383,
         "dec": -47.337,
         "v": 1.75,
-        "Name": "gamma_Vel"
+        "name": "gamma_Vel"
     },
     {
         "ra": 193.507,
         "dec": 55.96,
         "v": 1.76,
-        "Name": "epsilon_UMa (Alioth)"
+        "name": "epsilon_UMa (Alioth)"
     },
     {
         "ra": 276.043,
         "dec": -34.384,
         "v": 1.79,
-        "Name": "epsilon_Sgr (Kaus Australis)"
+        "name": "epsilon_Sgr (Kaus Australis)"
     },
     {
         "ra": 51.081,
         "dec": 49.861,
         "v": 1.79,
-        "Name": "alpha_Per (Mirphak)"
+        "name": "alpha_Per (Mirphak)"
     },
     {
         "ra": 165.933,
         "dec": 61.751,
         "v": 1.81,
-        "Name": "alpha_UMa (Dubhe)"
+        "name": "alpha_UMa (Dubhe)"
     },
     {
         "ra": 107.098,
         "dec": -26.393,
         "v": 1.83,
-        "Name": "delta_CMa"
+        "name": "delta_CMa"
     },
     {
         "ra": 206.886,
         "dec": 49.313,
         "v": 1.85,
-        "Name": "eta_UMa (Alkaid)"
+        "name": "eta_UMa (Alkaid)"
     },
     {
         "ra": 264.33,
         "dec": -42.998,
         "v": 1.86,
-        "Name": "theta_Sco"
+        "name": "theta_Sco"
     },
     {
         "ra": 125.629,
         "dec": -59.51,
         "v": 1.86,
-        "Name": "epsilon_Car"
+        "name": "epsilon_Car"
     },
     {
         "ra": 89.882,
         "dec": 44.947,
         "v": 1.9,
-        "Name": "beta_Aur"
+        "name": "beta_Aur"
     },
     {
         "ra": 252.166,
         "dec": -69.028,
         "v": 1.91,
-        "Name": "alpha_TrA"
+        "name": "alpha_TrA"
     },
     {
         "ra": 131.176,
         "dec": -54.709,
         "v": 1.93,
-        "Name": "delta_Vel"
+        "name": "delta_Vel"
     },
     {
         "ra": 99.428,
         "dec": 16.399,
         "v": 1.93,
-        "Name": "gamma_Gem (Alhena)"
+        "name": "gamma_Gem (Alhena)"
     },
     {
         "ra": 306.412,
         "dec": -56.735,
         "v": 1.94,
-        "Name": "alpha_Pav"
+        "name": "alpha_Pav"
     },
     {
         "ra": 37.946,
         "dec": 89.264,
         "v": 1.97,
-        "Name": "alpha_UMi (Polaris)"
+        "name": "alpha_UMi (Polaris)"
     },
     {
         "ra": 95.675,
         "dec": -17.956,
         "v": 1.98,
-        "Name": "beta_CMa"
+        "name": "beta_CMa"
     },
     {
         "ra": 141.897,
         "dec": -8.659,
         "v": 1.99,
-        "Name": "alpha_Hya (Alphard)"
+        "name": "alpha_Hya (Alphard)"
     },
     {
         "ra": 154.992,
         "dec": 19.842,
         "v": 2.01,
-        "Name": "gamma1_Leo (Algieba)"
+        "name": "gamma1_Leo (Algieba)"
     },
     {
         "ra": 31.793,
         "dec": 23.463,
         "v": 2.01,
-        "Name": "alpha_Ari (Hamal)"
+        "name": "alpha_Ari (Hamal)"
     },
     {
         "ra": 10.897,
         "dec": -17.987,
         "v": 2.04,
-        "Name": "beta_Cet (Diphda)"
+        "name": "beta_Cet (Diphda)"
     },
     {
         "ra": 283.816,
         "dec": -26.297,
         "v": 2.05,
-        "Name": "sigma_Sgr (Nunki)"
+        "name": "sigma_Sgr (Nunki)"
     },
     {
         "ra": 211.672,
         "dec": -36.369,
         "v": 2.06,
-        "Name": "theta_Cen"
+        "name": "theta_Cen"
     },
     {
         "ra": 86.939,
         "dec": -9.67,
         "v": 2.07,
-        "Name": "kappa_Ori (Saiph)"
+        "name": "kappa_Ori (Saiph)"
     },
     {
         "ra": 2.097,
         "dec": 29.091,
         "v": 2.07,
-        "Name": "delta_Peg (Alpheratz)"
+        "name": "delta_Peg (Alpheratz)"
     },
     {
         "ra": 340.666,
         "dec": -46.885,
         "v": 2.07,
-        "Name": "beta_Gru"
+        "name": "beta_Gru"
     },
     {
         "ra": 17.432,
         "dec": 35.621,
         "v": 2.07,
-        "Name": "beta_And (Mirach)"
+        "name": "beta_And (Mirach)"
     },
     {
         "ra": 222.677,
         "dec": 74.155,
         "v": 2.07,
-        "Name": "beta_UMi (Kocab)"
+        "name": "beta_UMi (Kocab)"
     },
     {
         "ra": 263.733,
         "dec": 12.561,
         "v": 2.08,
-        "Name": "alpha_Oph (Rasalhague)"
+        "name": "alpha_Oph (Rasalhague)"
     },
     {
         "ra": 47.042,
         "dec": 40.956,
         "v": 2.09,
-        "Name": "beta_Per (Algol)"
+        "name": "beta_Per (Algol)"
     },
     {
         "ra": 30.975,
         "dec": 42.33,
         "v": 2.1,
-        "Name": "gamma1_And"
+        "name": "gamma1_And"
     },
     {
         "ra": 177.266,
         "dec": 14.572,
         "v": 2.14,
-        "Name": "beta_Leo (Denebola)"
+        "name": "beta_Leo (Denebola)"
     },
     {
         "ra": 14.177,
         "dec": 60.717,
         "v": 2.15,
-        "Name": "gamma_Cas"
+        "name": "gamma_Cas"
     },
     {
         "ra": 190.38,
         "dec": -48.96,
         "v": 2.2,
-        "Name": "gamma_Cen"
+        "name": "gamma_Cen"
     },
     {
         "ra": 120.896,
         "dec": -40.003,
         "v": 2.21,
-        "Name": "zeta_Pup"
+        "name": "zeta_Pup"
     },
     {
         "ra": 139.273,
         "dec": -59.275,
         "v": 2.21,
-        "Name": "iota_Car"
+        "name": "iota_Car"
     },
     {
         "ra": 233.672,
         "dec": 26.715,
         "v": 2.22,
-        "Name": "alpha_CrB (Alphekka)"
+        "name": "alpha_CrB (Alphekka)"
     },
     {
         "ra": 136.999,
         "dec": -43.433,
         "v": 2.23,
-        "Name": "lambda_Vel"
+        "name": "lambda_Vel"
     },
     {
         "ra": 305.557,
         "dec": 40.257,
         "v": 2.23,
-        "Name": "gamma_Cyg"
+        "name": "gamma_Cyg"
     },
     {
         "ra": 200.981,
         "dec": 54.925,
         "v": 2.23,
-        "Name": "zeta_UMa (Mizar)"
+        "name": "zeta_UMa (Mizar)"
     },
     {
         "ra": 10.127,
         "dec": 56.537,
         "v": 2.24,
-        "Name": "alpha_Cas (Shedir)"
+        "name": "alpha_Cas (Shedir)"
     },
     {
         "ra": 269.152,
         "dec": 51.489,
         "v": 2.24,
-        "Name": "gamma_Dra (Etamin)"
+        "name": "gamma_Dra (Etamin)"
     },
     {
         "ra": 83.002,
         "dec": -0.299,
         "v": 2.25,
-        "Name": "delta_Ori (Mintaka)"
+        "name": "delta_Ori (Mintaka)"
     },
     {
         "ra": 2.292,
         "dec": 59.15,
         "v": 2.28,
-        "Name": "beta_Cas (Caph)"
+        "name": "beta_Cas (Caph)"
     },
     {
         "ra": 240.083,
         "dec": -22.622,
         "v": 2.29,
-        "Name": "delta_Sco"
+        "name": "delta_Sco"
     },
     {
         "ra": 252.543,
         "dec": -34.293,
         "v": 2.29,
-        "Name": "epsilon_Sco"
+        "name": "epsilon_Sco"
     },
     {
         "ra": 204.972,
         "dec": -53.466,
         "v": 2.29,
-        "Name": "epsilon_Cen"
+        "name": "epsilon_Cen"
     },
     {
         "ra": 220.482,
         "dec": -47.388,
         "v": 2.3,
-        "Name": "alpha_Lup"
+        "name": "alpha_Lup"
     },
     {
         "ra": 218.877,
         "dec": -42.158,
         "v": 2.33,
-        "Name": "eta_Cen"
+        "name": "eta_Cen"
     },
     {
         "ra": 165.46,
         "dec": 56.382,
         "v": 2.34,
-        "Name": "beta_UMa (Merak)"
+        "name": "beta_UMa (Merak)"
     },
     {
         "ra": 221.247,
         "dec": 27.074,
         "v": 2.35,
-        "Name": "epsilon_Boo (Izar)"
+        "name": "epsilon_Boo (Izar)"
     },
     {
         "ra": 326.046,
         "dec": 9.875,
         "v": 2.38,
-        "Name": "epsilon_Peg (Enif)"
+        "name": "epsilon_Peg (Enif)"
     },
     {
         "ra": 265.622,
         "dec": -39.03,
         "v": 2.39,
-        "Name": "kappa_Sco"
+        "name": "kappa_Sco"
     },
     {
         "ra": 6.57,
         "dec": -42.305,
         "v": 2.4,
-        "Name": "alpha_Phe (Ankaa)"
+        "name": "alpha_Phe (Ankaa)"
     },
     {
         "ra": 178.457,
         "dec": 53.695,
         "v": 2.41,
-        "Name": "gamma_UMa (Phad)"
+        "name": "gamma_UMa (Phad)"
     },
     {
         "ra": 257.594,
         "dec": -15.725,
         "v": 2.43,
-        "Name": "eta_Oph"
+        "name": "eta_Oph"
     },
     {
         "ra": 345.943,
         "dec": 28.082,
         "v": 2.44,
-        "Name": "beta_Peg (Scheat)"
+        "name": "beta_Peg (Scheat)"
     },
     {
         "ra": 319.644,
         "dec": 62.585,
         "v": 2.45,
-        "Name": "alpha_Cep (Alderamin)"
+        "name": "alpha_Cep (Alderamin)"
     },
     {
         "ra": 111.024,
         "dec": -29.303,
         "v": 2.45,
-        "Name": "eta_CMa"
+        "name": "eta_CMa"
     },
     {
         "ra": 140.528,
         "dec": -55.011,
         "v": 2.47,
-        "Name": "kappa_Vel"
+        "name": "kappa_Vel"
     },
     {
         "ra": 311.552,
         "dec": 33.969,
         "v": 2.48,
-        "Name": "epsilon_Cyg"
+        "name": "epsilon_Cyg"
     },
     {
         "ra": 346.19,
         "dec": 15.205,
         "v": 2.49,
-        "Name": "alpha_Peg (Markab)"
+        "name": "alpha_Peg (Markab)"
     },
     {
         "ra": 249.29,
         "dec": -10.567,
         "v": 2.54,
-        "Name": "zeta_Oph"
+        "name": "zeta_Oph"
     },
     {
         "ra": 45.57,
         "dec": 4.09,
         "v": 2.54,
-        "Name": "alpha_Cet (Menkar)"
+        "name": "alpha_Cet (Menkar)"
     },
     {
         "ra": 208.885,
         "dec": -47.288,
         "v": 2.55,
-        "Name": "zeta_Cen"
+        "name": "zeta_Cen"
     },
     {
         "ra": 241.359,
         "dec": -19.805,
         "v": 2.56,
-        "Name": "beta1_Sco"
+        "name": "beta1_Sco"
     },
     {
         "ra": 168.527,
         "dec": 20.524,
         "v": 2.56,
-        "Name": "delta_Leo"
+        "name": "delta_Leo"
     },
     {
         "ra": 182.09,
         "dec": -50.722,
         "v": 2.58,
-        "Name": "delta_Cen"
+        "name": "delta_Cen"
     },
     {
         "ra": 83.183,
         "dec": -17.822,
         "v": 2.58,
-        "Name": "alpha_Lep (Arneb)"
+        "name": "alpha_Lep (Arneb)"
     },
     {
         "ra": 183.952,
         "dec": -17.542,
         "v": 2.58,
-        "Name": "gamma_Crv"
+        "name": "gamma_Crv"
     },
     {
         "ra": 285.653,
         "dec": -29.88,
         "v": 2.6,
-        "Name": "zeta_Sgr"
+        "name": "zeta_Sgr"
     },
     {
         "ra": 229.252,
         "dec": -9.383,
         "v": 2.61,
-        "Name": "beta_Lib"
+        "name": "beta_Lib"
     },
     {
         "ra": 236.067,
         "dec": 6.426,
         "v": 2.63,
-        "Name": "alpha_Ser (Unukalhai)"
+        "name": "alpha_Ser (Unukalhai)"
     },
     {
         "ra": 28.66,
         "dec": 20.808,
         "v": 2.64,
-        "Name": "beta_Ari"
+        "name": "beta_Ari"
     },
     {
         "ra": 89.93,
         "dec": 37.213,
         "v": 2.65,
-        "Name": "theta_Aur"
+        "name": "theta_Aur"
     },
     {
         "ra": 188.597,
         "dec": -23.397,
         "v": 2.65,
-        "Name": "beta_Crv"
+        "name": "beta_Crv"
     },
     {
         "ra": 84.912,
         "dec": -34.074,
         "v": 2.65,
-        "Name": "alpha_Col"
+        "name": "alpha_Col"
     },
     {
         "ra": 21.453,
         "dec": 60.235,
         "v": 2.66,
-        "Name": "delta_Cas"
+        "name": "delta_Cas"
     },
     {
         "ra": 208.671,
         "dec": 18.399,
         "v": 2.68,
-        "Name": "eta_Boo"
+        "name": "eta_Boo"
     },
     {
         "ra": 224.633,
         "dec": -43.134,
         "v": 2.68,
-        "Name": "beta_Lup"
+        "name": "beta_Lup"
     },
     {
         "ra": 161.692,
         "dec": -49.42,
         "v": 2.69,
-        "Name": "mu_Vel"
+        "name": "mu_Vel"
     },
     {
         "ra": 189.296,
         "dec": -69.136,
         "v": 2.69,
-        "Name": "alpha_Mus"
+        "name": "alpha_Mus"
     },
     {
         "ra": 74.248,
         "dec": 33.166,
         "v": 2.69,
-        "Name": "iota_Aur"
+        "name": "iota_Aur"
     },
     {
         "ra": 262.691,
         "dec": -37.296,
         "v": 2.7,
-        "Name": "nu_Sco"
+        "name": "nu_Sco"
     },
     {
         "ra": 109.286,
         "dec": -37.097,
         "v": 2.71,
-        "Name": "pi_Pup"
+        "name": "pi_Pup"
     },
     {
         "ra": 296.565,
         "dec": 10.613,
         "v": 2.72,
-        "Name": "gamma_Aql (Tarazed)"
+        "name": "gamma_Aql (Tarazed)"
     },
     {
         "ra": 275.248,
         "dec": -29.828,
         "v": 2.72,
-        "Name": "delta_Sgr"
+        "name": "delta_Sgr"
     },
     {
         "ra": 245.998,
         "dec": 61.514,
         "v": 2.73,
-        "Name": "eta_Dra"
+        "name": "eta_Dra"
     },
     {
         "ra": 243.587,
         "dec": -3.694,
         "v": 2.73,
-        "Name": "delta_Oph"
+        "name": "delta_Oph"
     },
     {
         "ra": 190.417,
         "dec": -1.45,
         "v": 2.74,
-        "Name": "gamma_Vir"
+        "name": "gamma_Vir"
     },
     {
         "ra": 160.739,
         "dec": -64.394,
         "v": 2.74,
-        "Name": "theta_Car"
+        "name": "theta_Car"
     },
     {
         "ra": 222.72,
         "dec": -16.042,
         "v": 2.75,
-        "Name": "alpha1_Lib"
+        "name": "alpha1_Lib"
     },
     {
         "ra": 200.15,
         "dec": -36.712,
         "v": 2.75,
-        "Name": "iota_Cen"
+        "name": "iota_Cen"
     },
     {
         "ra": 83.858,
         "dec": -5.91,
         "v": 2.75,
-        "Name": "iotaOri"
+        "name": "iotaOri"
     },
     {
         "ra": 265.868,
         "dec": 4.567,
         "v": 2.76,
-        "Name": "beta_Oph"
+        "name": "beta_Oph"
     },
     {
         "ra": 76.963,
         "dec": -5.086,
         "v": 2.78,
-        "Name": "beta_Eri"
+        "name": "beta_Eri"
     },
     {
         "ra": 247.555,
         "dec": 21.49,
         "v": 2.78,
-        "Name": "beta_Her"
+        "name": "beta_Her"
     },
     {
         "ra": 258.662,
         "dec": 14.39,
         "v": 2.78,
-        "Name": "alpha1/2_Her (Rasalgethi)"
+        "name": "alpha1/2_Her (Rasalgethi)"
     },
     {
         "ra": 183.786,
         "dec": -58.749,
         "v": 2.79,
-        "Name": "delta_Cru"
+        "name": "delta_Cru"
     },
     {
         "ra": 262.608,
         "dec": 52.301,
         "v": 2.79,
-        "Name": "beta_Dra"
+        "name": "beta_Dra"
     },
     {
         "ra": 233.785,
         "dec": -41.167,
         "v": 2.8,
-        "Name": "gamma_Lup"
+        "name": "gamma_Lup"
     },
     {
         "ra": 250.323,
         "dec": 31.602,
         "v": 2.81,
-        "Name": "zeta_Her"
+        "name": "zeta_Her"
     },
     {
         "ra": 82.061,
         "dec": -20.759,
         "v": 2.81,
-        "Name": "beta_Lep (Nihal)"
+        "name": "beta_Lep (Nihal)"
     },
     {
         "ra": 248.971,
         "dec": -28.216,
         "v": 2.82,
-        "Name": "tau_Sco"
+        "name": "tau_Sco"
     },
     {
         "ra": 6.413,
         "dec": -77.255,
         "v": 2.82,
-        "Name": "beta_Hyi"
+        "name": "beta_Hyi"
     },
     {
         "ra": 276.993,
         "dec": -25.421,
         "v": 2.82,
-        "Name": "lambda_Sgr"
+        "name": "lambda_Sgr"
     },
     {
         "ra": 3.309,
         "dec": 15.184,
         "v": 2.83,
-        "Name": "gamma_Peg (Algenib)"
+        "name": "gamma_Peg (Algenib)"
     },
     {
         "ra": 121.886,
         "dec": -24.304,
         "v": 2.83,
-        "Name": "rho_Pup"
+        "name": "rho_Pup"
     },
     {
         "ra": 238.787,
         "dec": -63.43,
         "v": 2.83,
-        "Name": "beta_TrA"
+        "name": "beta_TrA"
     },
     {
         "ra": 261.325,
         "dec": -55.53,
         "v": 2.84,
-        "Name": "beta_Ara"
+        "name": "beta_Ara"
     },
     {
         "ra": 262.961,
         "dec": -49.876,
         "v": 2.84,
-        "Name": "alpha_Ara"
+        "name": "alpha_Ara"
     },
     {
         "ra": 58.533,
         "dec": 31.884,
         "v": 2.84,
-        "Name": "zeta_Per"
+        "name": "zeta_Per"
     },
     {
         "ra": 326.76,
         "dec": -16.127,
         "v": 2.85,
-        "Name": "delta_Cap"
+        "name": "delta_Cap"
     },
     {
         "ra": 195.545,
         "dec": 10.959,
         "v": 2.85,
-        "Name": "epsilon_Vir (Vindemiatrix)"
+        "name": "epsilon_Vir (Vindemiatrix)"
     },
     {
         "ra": 56.871,
         "dec": 24.105,
         "v": 2.85,
-        "Name": "eta_Tau (Alcyone)"
+        "name": "eta_Tau (Alcyone)"
     },
     {
         "ra": 29.691,
         "dec": -61.57,
         "v": 2.86,
-        "Name": "alpha_Hyi"
+        "name": "alpha_Hyi"
     },
     {
         "ra": 296.244,
         "dec": 45.131,
         "v": 2.86,
-        "Name": "delta_Cyg"
+        "name": "delta_Cyg"
     },
     {
         "ra": 334.626,
         "dec": -60.259,
         "v": 2.87,
-        "Name": "alpha_Tuc"
+        "name": "alpha_Tuc"
     },
     {
         "ra": 95.74,
         "dec": 22.514,
         "v": 2.87,
-        "Name": "mu_Gem"
+        "name": "mu_Gem"
     }
 ]
