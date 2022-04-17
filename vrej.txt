@@ -1,0 +1,9 @@
+let canvas = document.getElementById('sky');
+let l = canvas.width;
+let r = l / 2;
+let ctx = canvas.getContext('2d');
+ctx.fillStyle = '#36393B';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.arc(r, r, 140, 0, 2 * Math.PI);
+ctx.strokeStyle = 'white';
+ctx.stroke();
