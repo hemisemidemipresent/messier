@@ -954,7 +954,7 @@ function redrawCanvas() {
     canvas.height = diameter;
 
     // dark bg
-    context.fillStyle = '#36393B';
+    context.fillStyle = '#000';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     // draw circle
@@ -1024,7 +1024,7 @@ function onMouseMove(event) {
     const scaledY = toTrueY(cursorY);
     const prevScaledX = toTrueX(prevCursorX);
     const prevScaledY = toTrueY(prevCursorY);
-
+    console.log(cursorX, cursorY);
     if (leftMouseDown) {
         // add the line to our drawing history
         drawings.push({
