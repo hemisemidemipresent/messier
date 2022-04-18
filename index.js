@@ -1,3 +1,8 @@
+let list = [];
+
+let limitMag = 5;
+let lat;
+let lst;
 // get our canvas element
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
@@ -8,9 +13,10 @@ document.oncontextmenu = function () {
     return false;
 };
 
-// list of all strokes drawn
+// list of strokes drawn
+let lines = [];
+// list of all of them
 const drawings = [];
-
 // coordinates of our cursor
 let cursorX;
 let cursorY;
@@ -45,6 +51,10 @@ function trueWidth() {
 }
 
 function redrawCanvas() {
+    console.log('redrawCanvas');
+    lat = (parseFloat(document.getElementById('lat').value) * Math.PI) / 180;
+    lst = (parseFloat(document.getElementById('lst').value) * 15 * Math.PI) / 180;
+
     // set the canvas to the size of the window
     canvas.width = diameter;
     canvas.height = diameter;
@@ -60,18 +70,30 @@ function redrawCanvas() {
 
     // draw annotations
     for (let i = 0; i < drawings.length; i++) {
-        const line = drawings[i];
-        drawLine(toScreenX(line.x0), toScreenY(line.y0), toScreenX(line.x1), toScreenY(line.y1));
+        for (let j = 0; j < drawings[i].length; j++) {
+            const line = drawings[i][j];
+            drawLine(toScreenX(line.x0), toScreenY(line.y0), toScreenX(line.x1), toScreenY(line.y1));
+        }
     }
 
     // draw stars
     context.fillStyle = '#fff';
 
     for (let i = 0; i < list.length; i++) {
-        drawStar(-1, 2.86, list[i]);
+        drawStar(lat, lst, list[i]); // drawStar(lat, LST, ...) in radians
     }
 }
-redrawCanvas();
+axios
+    .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/Vmag6_min.json')
+    .then(function (response) {
+        list = response.data;
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+    .then(function () {
+        redrawCanvas();
+    });
 
 // if the window changes size, redraw the canvas
 window.addEventListener('resize', (event) => {
@@ -123,7 +145,7 @@ function onMouseMove(event) {
 
     if (leftMouseDown) {
         // add the line to our drawing history
-        drawings.push({
+        lines.push({
             x0: prevScaledX,
             y0: prevScaledY,
             x1: scaledX,
@@ -151,6 +173,9 @@ function onMouseMove(event) {
     prevCursorY = cursorY;
 }
 function onMouseUp() {
+    if (lines.length > 0) drawings.push(lines);
+
+    lines = [];
     leftMouseDown = false;
     rightMouseDown = false;
 }
@@ -226,7 +251,7 @@ function onTouchMove(event) {
 
     if (singleTouch) {
         // add to history
-        drawings.push({
+        lines.push({
             x0: prevScaledX,
             y0: prevScaledY,
             x1: scaledX,
@@ -291,11 +316,14 @@ function onTouchEnd(event) {
 }
 function drawStar(lat, lst, star) {
     let { dec, ra, v } = star;
-    if (v > 4) return;
+    if (v > limitMag) return;
     dec = (dec / 180) * Math.PI;
     ra = (ra / 180) * Math.PI;
 
     let ha = lst - ra;
+
+    if (ra % (2 * Math.PI) > Math.PI / 50) return;
+    console.log(ra);
     // equitorial to horizontal
     let alt = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(ha));
     if (alt < 0) return;
@@ -308,7 +336,11 @@ function drawStar(lat, lst, star) {
     let x = toScreenX(radius + r * Math.cos(az));
     let y = toScreenY(radius + r * Math.sin(az));
 
-    let size = 6 - v;
+    let size = (6 - v) * scale;
 
     context.fillRect(x, y, size, size);
+}
+function undo() {
+    drawings.pop();
+    redrawCanvas();
 }

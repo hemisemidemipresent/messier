@@ -18,7 +18,6 @@ async function main() {
         let coordstring = star.coord;
         let tokens = coordstring.split(' ');
         let ra = Math.abs(parseInt(tokens[0])) + parseInt(tokens[1]) / 60 + parseFloat(tokens[2]) / 3600;
-        ra *= Math.sign(parseInt(tokens[0]));
         ra *= 15;
 
         obj.ra = ra;
