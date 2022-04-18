@@ -16,7 +16,7 @@ document.oncontextmenu = function () {
 // list of strokes drawn
 let lines = [];
 // list of all of them
-const drawings = [];
+let drawings = [];
 // coordinates of our cursor
 let cursorX;
 let cursorY;

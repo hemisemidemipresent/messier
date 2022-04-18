@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>Infinite Canvas</title>
+    <title>Star Chart</title>
 
     <style>
         html,
@@ -63,7 +63,7 @@
     <label>Enter local siderial time (in hours, decimal):</label>
     <input type="number" id="lst" name="gpuLevel" min="-90" max="90" value="23">
     <br>
-    <button onclick="redrawCanvas()" id="undoBtn">Redraw</button>
+    <button onclick="drawings=[];redrawCanvas()" id="undoBtn">reload</button>
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
