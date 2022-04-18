@@ -6,14 +6,14 @@ const writeFile = promisify(fs.writeFile);
 let newArr = [];
 
 async function main() {
-    let thing = await readFile('Vmag6.json', 'utf-8');
+    let thing = await readFile('./data/Vmag6_raw.json', 'utf-8');
     let json = JSON.parse(thing);
     for (let i = 0; i < json.length; i++) {
         let star = json[i];
         let obj = {};
 
         obj.v = star.v;
-        obj.name = star.name;
+        obj.name = star.name.replace(/\* /g, '');
 
         let coordstring = star.coord;
         let tokens = coordstring.split(' ');
@@ -28,7 +28,6 @@ async function main() {
         obj.dec = dec;
         newArr.push(obj);
     }
-    // log it, write to file, etc
-    await writeFile('yee.json', JSON.stringify(newArr));
+    await writeFile('Vmag6_min.json', JSON.stringify(newArr));
 }
 main();
