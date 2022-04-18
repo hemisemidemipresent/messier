@@ -322,8 +322,6 @@ function drawStar(lat, lst, star) {
 
     let ha = lst - ra;
 
-    if (ra % (2 * Math.PI) > Math.PI / 50) return;
-    console.log(ra);
     // equitorial to horizontal
     let alt = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(ha));
     if (alt < 0) return;
