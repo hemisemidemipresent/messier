@@ -6,7 +6,7 @@ const writeFile = promisify(fs.writeFile);
 let newArr = [];
 
 async function main() {
-    let thing = await readFile('./data/Vmag6_raw.json', 'utf-8');
+    let thing = await readFile('.Vmag6_raw.json', 'utf-8');
     let json = JSON.parse(thing);
     for (let i = 0; i < json.length; i++) {
         let star = json[i];
@@ -27,6 +27,6 @@ async function main() {
         obj.dec = dec;
         newArr.push(obj);
     }
-    await writeFile('Vmag6_min.json', JSON.stringify(newArr));
+    await writeFile('../Vmag6_min.json', JSON.stringify(newArr));
 }
 main();
