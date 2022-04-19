@@ -405,5 +405,6 @@ function undo() {
 
 function checkAns() {
     let input = document.getElementById('messier').value;
-    console.log(input);
+    if (input == messier.M.replace('M', '')) alert('good job');
+    else alert(`it was ${messier.M}. L`);
 }
