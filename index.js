@@ -1,4 +1,7 @@
 let list = [];
+let messiers = [];
+let messier = [];
+let l = 10; // messier cross length
 
 let limitMag = 5;
 let lat;
@@ -7,6 +10,7 @@ let lst;
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 const diameter = Math.min(document.body.clientWidth, document.body.clientHeight);
+const radius = diameter / 2;
 
 // disable right clicking
 document.oncontextmenu = function () {
@@ -51,9 +55,8 @@ function trueWidth() {
 }
 
 function redrawCanvas() {
-    console.log('redrawCanvas');
-    lat = (parseFloat(document.getElementById('lat').value) * Math.PI) / 180;
-    lst = (parseFloat(document.getElementById('lst').value) * 15 * Math.PI) / 180;
+    lat = d2r(parseFloat(document.getElementById('lat').value));
+    lst = d2r(parseFloat(document.getElementById('lst').value) * 15);
 
     // set the canvas to the size of the window
     canvas.width = diameter;
@@ -65,7 +68,7 @@ function redrawCanvas() {
 
     // draw circle
     context.strokeStyle = '#fff';
-    context.arc(toScreenX(diameter / 2), toScreenY(diameter / 2), diameter * scale * 0.5, 0, 2 * Math.PI);
+    context.arc(toScreenX(radius), toScreenY(radius), radius * scale, 0, 2 * Math.PI);
     context.stroke();
 
     // draw annotations
@@ -83,19 +86,11 @@ function redrawCanvas() {
         drawStar(lat, lst, list[i]); // drawStar(lat, LST, ...) in radians
     }
 
-    // draw random messier
-
-    axios
-        .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/Vmag6_min.json')
-        .then(function (response) {
-            list = response.data;
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
-        .then(function () {
-            redrawCanvas();
-        });
+    // messier
+    context.strokeStyle = '#0f0';
+    drawLine(toScreenX(messier.x + l), toScreenY(messier.y + l), toScreenX(messier.x - l), toScreenY(messier.y - l));
+    drawLine(toScreenX(messier.x + l), toScreenY(messier.y - l), toScreenX(messier.x - l), toScreenY(messier.y + l));
+    context.strokeStyle = '#fff';
 }
 axios
     .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/Vmag6_min.json')
@@ -106,7 +101,18 @@ axios
         console.log(error);
     })
     .then(function () {
-        redrawCanvas();
+        axios
+            .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/messier_min.json')
+            .then(function (response) {
+                messiers = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+                redrawCanvas();
+                drawMessier();
+            });
     });
 
 // if the window changes size, redraw the canvas
@@ -331,28 +337,73 @@ function onTouchEnd(event) {
 function drawStar(lat, lst, star) {
     let { dec, ra, v } = star;
     if (v > limitMag) return;
-    dec = (dec / 180) * Math.PI;
-    ra = (ra / 180) * Math.PI;
 
-    let ha = lst - ra;
+    dec = d2r(dec);
+    ra = d2r(ra);
 
-    // equitorial to horizontal
-    let alt = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(ha));
+    let [alt, az] = toAltAz(dec, ra);
     if (alt < 0) return;
-    let az = -Math.atan2(-Math.sin(ha) * Math.cos(dec) * Math.cos(lat), Math.sin(dec) - Math.sin(lat) * Math.sin(alt));
 
     // projecting the horizontal
-    let radius = diameter * 0.5;
 
-    let r = Math.tan(Math.PI / 4 - alt / 2) * radius;
-    let x = toScreenX(radius + r * Math.cos(az));
-    let y = toScreenY(radius + r * Math.sin(az));
+    let [x, y] = toXY(alt, az);
 
     let size = (6 - v) * scale;
 
     context.fillRect(x, y, size, size);
 }
+
+function drawMessier() {
+    let visibleMessiers = [];
+    for (let i = 0; i < messiers.length; i++) {
+        let messier = messiers[i];
+        let { dec, ra } = messier;
+        dec = d2r(dec);
+        ra = d2r(ra);
+        let [alt, az] = toAltAz(dec, ra);
+        messier.alt = alt;
+        messier.az = az;
+        if (alt > 0) visibleMessiers.push(messier);
+    }
+    visibleMessiers.filter((m) => m.name != messier.name); // prevents duplicates
+
+    messier = visibleMessiers[Math.floor(Math.random() * visibleMessiers.length)];
+    let { alt, az, name, num, M, v } = messier;
+
+    let [x, y] = toXY(alt, az);
+    messier.x = x;
+    messier.y = y;
+
+    context.strokeStyle = '#0f0';
+    drawLine(x + l, y + l, x - l, y - l);
+    drawLine(x + l, y - l, x - l, y + l);
+    context.strokeStyle = '#fff';
+}
+// dec, ra -> alt, az takes in radians
+function toAltAz(dec, ra) {
+    let ha = lst - ra; // hour angle
+    // equitorial to horizontal
+    let alt = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(ha));
+    let az = -Math.atan2(-Math.sin(ha) * Math.cos(dec) * Math.cos(lat), Math.sin(dec) - Math.sin(lat) * Math.sin(alt));
+    return [alt, az];
+}
+// alt, az -> stereographically projected x, y
+function toXY(alt, az) {
+    let r = Math.tan(Math.PI / 4 - alt / 2) * radius;
+    let x = toScreenX(radius + r * Math.cos(az));
+    let y = toScreenY(radius + r * Math.sin(az));
+    return [x, y];
+}
+// degree to radian
+function d2r(deg) {
+    return (deg / 180) * Math.PI;
+}
 function undo() {
     drawings.pop();
     redrawCanvas();
+}
+
+function checkAns() {
+    let input = document.getElementById('messier').value;
+    console.log(input);
 }

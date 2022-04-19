@@ -47,7 +47,7 @@
             float: left;
         }
 
-        #undoBtn {
+        button {
             border: 1px solid white;
             background-color: black;
             color: white;
@@ -63,7 +63,7 @@
 
     <p>Hold left click to draw, hold right click to pan. Scroll to zoom. zooming out is buggy.</p>
 
-    <button onclick="undo()" id="undoBtn">Undo</button>
+    <button onclick="undo()">Undo</button>
 
     <br>
 
@@ -77,12 +77,14 @@
 
     <br>
 
-    <button onclick="drawings=[];redrawCanvas()" id="undoBtn">reload</button>
+    <button onclick="drawings=[];drawMessier();redrawCanvas();">reload</button>
 
     <br>
 
     <label>Enter messier number of the crossed point:</label>
-    <input type="number" id="lst" name="messier" min="1" max="110" value="1">
+    <input type="number" id="messier" name="messier" min="1" max="110" value="1">
+    <button onclick="checkAns();">check ans</button>
+
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
