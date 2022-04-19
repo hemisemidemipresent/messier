@@ -82,6 +82,20 @@ function redrawCanvas() {
     for (let i = 0; i < list.length; i++) {
         drawStar(lat, lst, list[i]); // drawStar(lat, LST, ...) in radians
     }
+
+    // draw random messier
+
+    axios
+        .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/Vmag6_min.json')
+        .then(function (response) {
+            list = response.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+        .then(function () {
+            redrawCanvas();
+        });
 }
 axios
     .get('https://raw.githubusercontent.com/hemisemidemipresent/M/main/Vmag6_min.json')
