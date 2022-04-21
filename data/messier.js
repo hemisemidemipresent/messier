@@ -21,7 +21,7 @@ async function main() {
         if (!tokens[2]) tokens[2] = '0';
 
         let dec = Math.abs(parseInt(tokens[0])) + parseInt(tokens[1]) / 60 + parseFloat(tokens[2]) / 3600;
-        dec *= Math.sign(parseInt(tokens[0]));
+        if (!tokens[0].startsWith('+')) dec *= -1;
         star.dec = dec;
         newArr.push(star);
         console.log(star);
