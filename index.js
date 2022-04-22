@@ -2,7 +2,7 @@ let list = [];
 let messiers = [];
 let messier = [];
 let l = 10; // messier cross length
-
+let theta = 0;
 let limitMag = 5;
 let lat;
 let lst;
@@ -88,8 +88,10 @@ function redrawCanvas() {
 
     // messier
     context.strokeStyle = '#0f0';
-    drawLine(toScreenX(messier.x + l), toScreenY(messier.y + l), toScreenX(messier.x - l), toScreenY(messier.y - l));
-    drawLine(toScreenX(messier.x + l), toScreenY(messier.y - l), toScreenX(messier.x - l), toScreenY(messier.y + l));
+    let { alt, az } = messier;
+    let [x, y] = toXY(alt, az);
+    drawLine(x + l, y + l, x - l, y - l);
+    drawLine(x + l, y - l, x - l, y + l);
     context.strokeStyle = '#fff';
 }
 axios
@@ -371,8 +373,6 @@ function drawMessier() {
     let { alt, az, name, num, M, v } = messier;
 
     let [x, y] = toXY(alt, az);
-    messier.x = x;
-    messier.y = y;
 
     context.strokeStyle = '#0f0';
     drawLine(x + l, y + l, x - l, y - l);
@@ -390,6 +390,7 @@ function toAltAz(dec, ra) {
 // alt, az -> stereographically projected x, y
 function toXY(alt, az) {
     let r = Math.tan(Math.PI / 4 - alt / 2) * radius;
+    az += theta;
     let x = toScreenX(radius + r * Math.cos(az));
     let y = toScreenY(radius + r * Math.sin(az));
     return [x, y];
