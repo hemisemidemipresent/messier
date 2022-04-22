@@ -31,14 +31,15 @@
             /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
         }
 
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
         body {
             /* Hide scrollbar */
             overflow: hidden;
-        }
-
-        p {
-            margin: 0;
-            padding: 1em;
         }
 
         canvas {
@@ -47,11 +48,14 @@
             float: left;
         }
 
+
         button {
             border: 1px solid white;
             background-color: black;
             color: white;
             padding: 1em;
+            margin-bottom: 1em;
+            margin-top: 1em;
             border-radius: 0.5em;
         }
     </style>
@@ -60,7 +64,7 @@
 
 <body>
     <canvas id="canvas">Your browser does not support HTML5 canvas</canvas>
-
+    <br>
     <p>Hold left click to draw, hold right click to pan. Scroll to zoom. zooming out is buggy.</p>
 
     <button onclick="undo()">Undo</button>

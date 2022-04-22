@@ -41,6 +41,19 @@ function toScreenX(xTrue) {
 function toScreenY(yTrue) {
     return (yTrue + offsetY) * scale;
 }
+function rotXY(xScreen, yScreen) {
+    xScreen -= radius;
+    yScreen -= radius;
+    let r = Math.sqrt(Math.pow(xScreen, 2) + Math.pow(yScreen, 2));
+    let θ = Math.atan2(yScreen, xScreen) + theta;
+    let x = r * Math.cos(θ);
+    let y = r * Math.sin(θ);
+    x += radius;
+    y += radius;
+
+    return [x, y];
+}
+
 function toTrueX(xScreen) {
     return xScreen / scale - offsetX;
 }
@@ -75,7 +88,10 @@ function redrawCanvas() {
     for (let i = 0; i < drawings.length; i++) {
         for (let j = 0; j < drawings[i].length; j++) {
             const line = drawings[i][j];
-            drawLine(toScreenX(line.x0), toScreenY(line.y0), toScreenX(line.x1), toScreenY(line.y1));
+            let [x0, y0] = rotXY(toScreenX(line.x0), toScreenY(line.y0));
+            let [x1, y1] = rotXY(toScreenX(line.x1), toScreenY(line.y1));
+
+            drawLine(x0, y0, x1, y1);
         }
     }
 
@@ -388,6 +404,7 @@ function toAltAz(dec, ra) {
     return [alt, az];
 }
 // alt, az -> stereographically projected x, y
+// effeticely its polar coords (r,theta)->x,y
 function toXY(alt, az) {
     let r = Math.tan(Math.PI / 4 - alt / 2) * radius;
     az += theta;
