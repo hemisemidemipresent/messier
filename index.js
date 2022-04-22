@@ -44,7 +44,7 @@ function toScreenY(yTrue) {
 function rotXY(xScreen, yScreen) {
     xScreen -= radius;
     yScreen -= radius;
-    let r = Math.sqrt(Math.pow(xScreen, 2) + Math.pow(yScreen, 2));
+    let r = Math.sqrt(Math.pow(xScreen, 2) + Math.pow(yScreen, 2)) / scale;
     let θ = Math.atan2(yScreen, xScreen) + theta;
     let x = r * Math.cos(θ);
     let y = r * Math.sin(θ);
@@ -88,9 +88,12 @@ function redrawCanvas() {
     for (let i = 0; i < drawings.length; i++) {
         for (let j = 0; j < drawings[i].length; j++) {
             const line = drawings[i][j];
-            let [x0, y0] = rotXY(toScreenX(line.x0), toScreenY(line.y0));
-            let [x1, y1] = rotXY(toScreenX(line.x1), toScreenY(line.y1));
-
+            let r0 = Math.sqrt(Math.pow(line.x0 - radius, 2) + Math.pow(line.y0 - radius, 2));
+            let angle0 = Math.atan2(line.y0 - radius, line.x0 - radius);
+            let [x0, y0] = toXY(r0, angle0);
+            let r1 = Math.sqrt(Math.pow(line.x1 - radius, 2) + Math.pow(line.y1 - radius, 2));
+            let angle1 = Math.atan2(line.y1 - radius, line.x1 - radius);
+            let [x1, y1] = toXY(r1, angle1);
             drawLine(x0, y0, x1, y1);
         }
     }
@@ -105,7 +108,7 @@ function redrawCanvas() {
     // messier
     context.strokeStyle = '#0f0';
     let { alt, az } = messier;
-    let [x, y] = toXY(alt, az);
+    let [x, y] = altAzToXY(alt, az);
     drawLine(x + l, y + l, x - l, y - l);
     drawLine(x + l, y - l, x - l, y + l);
     context.strokeStyle = '#fff';
@@ -364,7 +367,7 @@ function drawStar(lat, lst, star) {
 
     // projecting the horizontal
 
-    let [x, y] = toXY(alt, az);
+    let [x, y] = altAzToXY(alt, az);
 
     let size = (6 - v) * scale;
 
@@ -388,7 +391,7 @@ function drawMessier() {
     messier = visibleMessiers[Math.floor(Math.random() * visibleMessiers.length)];
     let { alt, az, name, num, M, v } = messier;
 
-    let [x, y] = toXY(alt, az);
+    let [x, y] = altAzToXY(alt, az);
 
     context.strokeStyle = '#0f0';
     drawLine(x + l, y + l, x - l, y - l);
@@ -404,14 +407,17 @@ function toAltAz(dec, ra) {
     return [alt, az];
 }
 // alt, az -> stereographically projected x, y
-// effeticely its polar coords (r,theta)->x,y
-function toXY(alt, az) {
+function altAzToXY(alt, az) {
     let r = Math.tan(Math.PI / 4 - alt / 2) * radius;
-    az += theta;
-    let x = toScreenX(radius + r * Math.cos(az));
-    let y = toScreenY(radius + r * Math.sin(az));
+    return toXY(r, az);
+}
+function toXY(r, angle) {
+    angle += theta;
+    let x = toScreenX(radius + r * Math.cos(angle));
+    let y = toScreenY(radius + r * Math.sin(angle));
     return [x, y];
 }
+
 // degree to radian
 function d2r(deg) {
     return (deg / 180) * Math.PI;
